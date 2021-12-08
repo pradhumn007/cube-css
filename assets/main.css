@@ -1,0 +1,86 @@
+body{
+    background: #ddd;
+    height: 100vh;
+}
+
+.wapper{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    perspective: 1500px;
+}
+
+
+.box-area{
+    position: relative;
+    transform-style: preserve-3d;
+    animation: rotate 10s linear infinite;
+
+}
+
+@keyframes rotate{
+    0%{
+        transform: rotate3d(0,0,0,0);
+    }
+    100%{
+        transform: rotate3d(0,1,0,360deg);
+    }
+}
+
+.box{
+    position: absolute;
+    width: 400px;
+    height: 400px;
+    /* border: 2px solid #ffffff; */
+}
+
+:root{
+    --bg-color :radial-gradient(circle, rgba(13,31,143,0.4881302862942052) 0%, rgba(2,40,84,0.9671218829328606) 100%);
+}
+
+.box-front{
+    transform: translateX(-200px) translateY(-200px) translateZ(200px);
+    background: var(--bg-color);
+}
+
+.img-js{
+    width: 100%;
+    height: auto;
+    position: absolute;
+    /* top: 50px;
+    right: 50px; */
+    opacity: 0.7;
+}
+
+.box-back{
+    transform: translateX(-200px) translateY(-200px) translateZ(-200px);
+    background:var(--bg-color);
+}
+
+.box-right{
+    transform: translateY(-200px) rotateY(90deg);
+    background:var(--bg-color);
+}
+
+.box-left{
+    transform: translateY(-200px) translateX(-400px) rotateY(90deg);
+    background:var(--bg-color);
+}
+
+.box-bottom{
+    transform: translateX(-200px) rotateX(90deg);
+    background:var(--bg-color);
+    /* box-shadow: 0 30px 10px 0 rgba(0, 0, 0, 0.2), 0 20px 40px 0 rgba(0, 0, 0, 0.19); */
+}
+
+.box-top{
+    transform: translateX(-200px) translateY(-400px) rotateX(90deg);
+    background:var(--bg-color);
+}
+
+.box-area{
+    transform: rotateX(90deg) rotateY(90deg);
+}
+
+
+
